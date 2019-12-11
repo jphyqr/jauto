@@ -10,8 +10,37 @@ import UsedDashboard from '../../features/used/UsedDashboard/UsedDashboard';
 import VDPPage from '../../features/common/VDP/VDPPage/VDPPage';
 // import HomePage from '../../features/home/HomePage';
 // import TestComponent from '../../features/testarea/TestComponent';
-// import MarketDashboard from '../../features/dashboards/MarketDashboard';
+// import MarketDashboard from '../../features/dashboards/MarketDashboard';\
+var sMedia = sMedia || {};
+
+
+
  class App extends Component {
+
+
+   get_smedia_uuid =()=> {
+    if (typeof sMedia.XDomainCookie !== 'undefined') {
+        console.log("Requesting for uuid and session id");
+        sMedia.XDomainCookie.get('smedia_uuid', function(uuid) {
+            console.log("sMedia UUID: " + uuid);
+            console.log("sMedia Session Id: " + sMedia.Context.Browser.sessionId);
+        });
+    } else {
+        console.log("Waiting for Cookie to load smart offer");
+        setTimeout(this.get_smedia_uuid, 1000);
+    }
+  }
+
+
+  async componentDidMount(){
+   
+    await this.get_smedia_uuid()
+
+   
+      }
+
+
+
   render() {
     return (
       <Fragment>

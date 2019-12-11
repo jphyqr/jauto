@@ -8,14 +8,13 @@
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyBmLiQh0EBoDBZtlotVRbddryeGFSUbFSE",
-    authDomain: "strade-fe535.firebaseapp.com",
-    databaseURL: "https://strade-fe535.firebaseio.com",
-    projectId: "strade-fe535",
-    storageBucket: "strade-fe535.appspot.com",
-    messagingSenderId: "374574781809",
-    appId: "1:374574781809:web:d3f12b02e7d124ca72d2d0",
-    measurementId: "G-SXVQFVFK0F"
+    apiKey: "AIzaSyCEQSCcZ-dwuoJyG1ldQMUxGa8pRsoZKGY",
+    authDomain: "jauto-10612.firebaseapp.com",
+    databaseURL: "https://jauto-10612.firebaseio.com",
+    projectId: "jauto-10612",
+    storageBucket: "jauto-10612.appspot.com",
+    messagingSenderId: "1068870863114",
+    appId: "1:1068870863114:web:fe22aeb7826f7d67aad2f3"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
