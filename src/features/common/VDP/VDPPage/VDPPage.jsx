@@ -42,6 +42,8 @@ const query = ({match}) => {
  class VDPPage extends Component {
 
    get_smedia_uuid =()=> {
+
+    console.log({sMedia})
     if (typeof sMedia.XDomainCookie !== 'undefined') {
         console.log("Requesting for uuid and session id");
         sMedia.XDomainCookie.get('smedia_uuid', function(uuid) {
@@ -55,18 +57,13 @@ const query = ({match}) => {
   }
 
 
+
+  
+
   async componentDidMount(){
    
 
-    // console.log('SCRIPT', window)
-    // var sfn="//tm.smedia.ca/analytics/script.js"
-    // var sref = document.createElement('script');
-    // sref=document.createElement('script');
-    // sref.setAttribute("type","text/javascript");
-    // sref.setAttribute("src", sfn);
-    // sref.setAttribute("async", "");
-    // document.getElementsByTagName("head")[0].appendChild(sref);
-    
+ 
    await this.get_smedia_uuid()
    
       }
@@ -77,11 +74,12 @@ const query = ({match}) => {
         const exterior = "black"
         const interior = "black"
         const {   heading, vin, stock_no, engine, transmission,  miles, price, drivetrain, content, id   }  = vdp || {}
-
         let contentString = content&&content.split("[")[1].replace("\"", "")
         return (
             <div>
           <Segment>
+
+          <div id="smatp_trade_tool" data-dealerid="5df0c6998d900c1e4fbfbb7c"></div>
              <Header as='h5'>
                     {heading || ""}
                 </Header>

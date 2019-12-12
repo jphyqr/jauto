@@ -19,6 +19,7 @@ var sMedia = sMedia || {};
 
 
    get_smedia_uuid =()=> {
+    
     if (typeof sMedia.XDomainCookie !== 'undefined') {
         console.log("Requesting for uuid and session id");
         sMedia.XDomainCookie.get('smedia_uuid', function(uuid) {
@@ -33,7 +34,8 @@ var sMedia = sMedia || {};
 
 
   async componentDidMount(){
-   
+
+
     await this.get_smedia_uuid()
 
    
@@ -42,6 +44,11 @@ var sMedia = sMedia || {};
 
 
   render() {
+
+
+   // this.get_smedia_uuid()
+     
+
     return (
       <Fragment>
        

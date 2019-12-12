@@ -6,7 +6,7 @@ class HomePage extends Component {
         return (
             <div>
              <Header>JOHNS AUTO HOME PAGE</Header>
-            
+             <div id="smatp_trade_tool" data-dealerid="5df0c6998d900c1e4fbfbb7c"></div>
             </div>
         )
     }

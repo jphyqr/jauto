@@ -31,6 +31,8 @@ const query = () => {
         const {used_inventory} = this.props || []
         return (
             <div>
+              
+                <div id="smatp_trade_tool" data-dealerid="5df0c6998d900c1e4fbfbb7c"></div>
             <Header>Used Cards for Sale in Regina, SK</Header>
              
              {used_inventory&&used_inventory.map(inventory=>(
